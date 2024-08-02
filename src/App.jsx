@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { supabase } from './supabase.js';
-
+import NavBar from './components/NavBar.jsx';
 const App = () => {
+    const [user, setUser] = useState(null);
     return (
         <Router>
-            <div className="container">
-                <h1>Welcome to ElectricCloud</h1>
-                {/* Możesz dodać tutaj inne komponenty, jak np. <NavBar /> */}
-            </div>
+            <NavBar user={user} handleLogout={clearUserState} />
         </Router>
     );
 };
