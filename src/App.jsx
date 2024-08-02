@@ -6,7 +6,7 @@ const App = () => {
     const [user, setUser] = useState(null);
     return (
         <Router>
-            <NavBar user={user} handleLogout={clearUserState} />
+            <NavBar />
         </Router>
     );
 };
